@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+	<link rel="icon" type="image/x-icon" href="/images/icon.png">
+<style>
+body {background-color: powderblue;}
+h1   {color: DarkSlateBlue;font-family: courier;font-size: 200%;}
+p    {color: Navy;}
+a    {color: red;}
+</style>
+</head>
+<body>
+
+<audio id="test" contorl autoplay>
+  <source src="audio/music.ogg" type="audio/ogg">
+Your browser does not support the audio element.
+</audio>
+
+<script>
+var vid = document.getElementById("test");
+vid.loop = true;
+</script>
+
+<h1>玩桌遊找駿哥──不務正業的電機系學生</h1>
+
+<img src="images/photo.jpg" alt="photo" width="104" height="142">
+
+<p>This is my paragraph.這是我的自傳</p>
+
+<h2>我的高中</h2>
+<a href="https://www2.ck.tp.edu.tw">臺北市立建國高級中學</a>
+
+<h2>我的大學科系</h2>
+<a href="https://web.ee.ntu.edu.tw">臺灣大學電機工程學系</a>
+
+<h2>我的興趣嗜好</h2>
+<h3>玩桌遊是一種生活態度</h3><a href="https://boardgamearena.com/welcome">讓你線上玩桌遊──BoardGameArena</a>
+<a href="https://boardgamegeek.com">全世界最大的桌遊評論網──BoardGameGeek</a>
+<h3>玩遊戲是一種生活方式</h3><a href="https://www.nintendo.tw">老任台灣官網</a>
+<h3>看百合是一種精神食糧</h3><a href="https://www.facebook.com/yuri20180421">百合社</a>
+
+
+<h2 id="displayDateTime"></h2>
+
+</body>
+<script type="text/javascript">
+  function refreshTime() {
+  var today = new Date();
+  var day = today.getDay();
+  var hours = today.getHours()
+  hours = hours < 10 ? '0'+hours : hours;
+  var minutes = today.getMinutes()
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  var seconds = today.getSeconds()
+  seconds = seconds < 10 ? '0'+seconds : seconds; 
+  var date = (today.getMonth()+1)+'-'+today.getDate()+'-'+today.getFullYear();
+  var time = hours + ":" + minutes + ":" + seconds;
+  var dateTime = date+' '+time;
+   
+  document.getElementById("displayDateTime").innerHTML = dateTime 
+  }
+  setInterval(refreshTime, 1000);
+ 
+</script>
+</html>
